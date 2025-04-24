@@ -1,0 +1,1 @@
+# confdev_quarkus_mono2repo
