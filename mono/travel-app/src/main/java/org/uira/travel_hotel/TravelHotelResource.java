@@ -5,7 +5,6 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-
 import java.util.List;
 
 @Path("travel-hotel")
@@ -22,6 +21,12 @@ public class TravelHotelResource {
     @Path("findById")
     public TravelHotel findById(@QueryParam("id") long id) {
         return TravelHotel.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    public TravelHotel findByTravelOrderId(@QueryParam("travelOrderId") long id) {
+        return TravelHotel.findByTravelOrderId(id);
     }
 
     @POST
