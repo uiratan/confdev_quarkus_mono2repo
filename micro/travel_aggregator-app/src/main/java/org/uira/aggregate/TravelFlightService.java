@@ -25,10 +25,8 @@ public interface TravelFlightService {
     public TravelFlight findByTravelOrderId(@QueryParam("travelOrderId") long id);
 
     @POST
-    @Transactional
     public TravelFlight newTravelFlight(TravelFlight travelFlight);
 
     @DELETE
-    @Transactional
     public Response deleteById(long id);
 }

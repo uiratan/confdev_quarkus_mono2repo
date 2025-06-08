@@ -1,8 +1,5 @@
 package org.uira.aggregate;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Entity;
-
 public class TravelFlight {
 
     private Long id;
