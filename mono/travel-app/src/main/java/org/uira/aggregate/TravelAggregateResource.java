@@ -47,14 +47,14 @@ public class TravelAggregateResource {
         travelOrder = travelOrderResource.newTravelOrder(travelOrder);
 
         TravelFlight travelFlight = new TravelFlight();
+        travelFlight.travelOrderId = travelOrder.id;
         travelFlight.fromAirport = travelAggregatorDTO.getFromAirport();
         travelFlight.toAirport = travelAggregatorDTO.getToAirport();
-        travelFlight.travelOrderId = travelOrder.id;
         travelFlight = travelFlightResource.newTravelFlight(travelFlight);
 
         TravelHotel travelHotel = new TravelHotel();
-        travelHotel.nights = travelAggregatorDTO.getNights();
         travelHotel.travelOrderId = travelOrder.id;
+        travelHotel.nights = travelAggregatorDTO.getNights();
         travelHotel = travelHotelResource.newTravelHotel(travelHotel);
 
         return TravelAggregatorDTO.of(travelOrder, travelFlight, travelHotel);
