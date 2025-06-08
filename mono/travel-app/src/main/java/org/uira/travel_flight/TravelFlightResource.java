@@ -31,7 +31,7 @@ public class TravelFlightResource {
 
     @POST
     @Transactional
-    public TravelFlight newItem(TravelFlight travelFlight) {
+    public TravelFlight newTravelFlight(TravelFlight travelFlight) {
         travelFlight.id = null;
         travelFlight.persist();
 

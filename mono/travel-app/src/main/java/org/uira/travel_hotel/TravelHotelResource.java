@@ -31,7 +31,7 @@ public class TravelHotelResource {
 
     @POST
     @Transactional
-    public TravelHotel newItem(TravelHotel travelHotel) {
+    public TravelHotel newTravelHotel(TravelHotel travelHotel) {
         travelHotel.id = null;
         travelHotel.persist();
 

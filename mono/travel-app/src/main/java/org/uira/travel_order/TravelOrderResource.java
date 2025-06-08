@@ -25,7 +25,7 @@ public class TravelOrderResource {
 
     @POST
     @Transactional
-    public TravelOrder newItem(TravelOrder travelOrder) {
+    public TravelOrder newTravelOrder(TravelOrder travelOrder) {
         travelOrder.id = null;
         travelOrder.persist();
 
