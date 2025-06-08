@@ -13,7 +13,8 @@ import java.util.List;
 public class TravelOrderResource {
 
     @GET
-    public List<TravelOrder> listAll() {
+    public List<TravelOrder> travelOrders() throws InterruptedException {
+//        Thread.sleep(10000);
         return TravelOrder.listAll();
     }
 
